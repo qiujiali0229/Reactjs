@@ -1,7 +1,7 @@
 module.exports = {
     entry : __dirname + '/js/app.js',
     output : {
-        path : __dirname + './build',
+        path : __dirname + '/build/',
         filename : 'bundle.js'
     },
     module:{
