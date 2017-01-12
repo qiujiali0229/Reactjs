@@ -63,10 +63,10 @@
 	var Layout = React.createClass({displayName: "Layout",
 	  render : function(){
 	    return (
-	      React.createElement("div", null, 
-	          React.createElement("div", {id: "memberCenter"}), 
-	          React.createElement("div", {id: "myOrder"}), 
-	          React.createElement("div", {id: "myWallet"}), 
+	      React.createElement("div", {style: styleSheets.div}, 
+	          React.createElement("div", {id: "memberCenter", style: styleSheets.mcHead}), 
+	          React.createElement("div", {id: "myOrder", style: styleSheets.mcOrder}), 
+	          React.createElement("div", {id: "myWallet", style: styleSheets.mcWallet}), 
 	          React.createElement("div", {id: "memberItem"})
 	      )
 	    )
@@ -82,8 +82,8 @@
 	var MemberItem = React.createClass({displayName: "MemberItem",
 	  render : function(){
 	    return (
-	      React.createElement("div", null, 
-	          "This is my MemberItem Comp"
+	      React.createElement("div", null
+	          
 	      )
 	    )
 	  }
@@ -98,8 +98,14 @@
 	var MyOrder = React.createClass({displayName: "MyOrder",
 	  render : function(){
 	    return (
-	      React.createElement("div", null, 
-	          "This is my MyOrder Comp"
+	      React.createElement("div", {style: styleSheets.mcOrder}, 
+	          React.createElement("p", {style: styleSheets.myOrder}, React.createElement("span", {className: "iconfont", style: styleSheets.orderSpan1}, ""), "我的订单", React.createElement("span", {style: styleSheets.orderSpan2, className: "iconfont"}, "查看全部订单 ")), 
+	          React.createElement("div", {style: styleSheets.orderBox}, 
+	              React.createElement("div", {style: styleSheets.orderDIV}, React.createElement("span", {style: styleSheets.orderSpan, className: "iconfont"}, ""), React.createElement("p", null, "待发货")), 
+	              React.createElement("div", {style: styleSheets.orderDIV}, React.createElement("span", {style: styleSheets.orderSpan, className: "iconfont"}, ""), React.createElement("p", null, "待自提")), 
+	              React.createElement("div", {style: styleSheets.orderDIV}, React.createElement("span", {style: styleSheets.orderSpan, className: "iconfont"}, ""), React.createElement("p", null, "待评价")), 
+	              React.createElement("div", {style: styleSheets.orderDIV}, React.createElement("span", {style: styleSheets.orderSpan, className: "iconfont"}, ""), React.createElement("p", null, "待发货"))
+	          )
 	      )
 	    )
 	  }
@@ -115,7 +121,13 @@
 	  render : function(){
 	    return (
 	      React.createElement("div", null, 
-	          "This is my MyWallet Comp"
+	          React.createElement("p", {style: styleSheets.myWallet}, React.createElement("span", {className: "iconfont", style: styleSheets.walletSpan1}, ""), "我的钱包", React.createElement("span", {style: styleSheets.orderSpan2, className: "iconfont"}, "（登录之后查看您的钱包） ")), 
+	          React.createElement("div", {style: styleSheets.orderBox}, 
+	              React.createElement("div", {style: styleSheets.orderDIV}, React.createElement("span", {style: styleSheets.orderSpan, className: "iconfont"}, "--"), React.createElement("p", {style: styleSheets.walletP}, "账户余额")), 
+	              React.createElement("div", {style: styleSheets.orderDIV}, React.createElement("span", {style: styleSheets.orderSpan, className: "iconfont"}, "--"), React.createElement("p", {style: styleSheets.walletP}, "优惠券")), 
+	              React.createElement("div", {style: styleSheets.orderDIV}, React.createElement("span", {style: styleSheets.orderSpan, className: "iconfont"}, "--"), React.createElement("p", {style: styleSheets.walletP}, "积分")), 
+	              React.createElement("div", {style: styleSheets.orderDIV}, React.createElement("span", {style: styleSheets.orderSpan, className: "iconfont"}, "--"), React.createElement("p", {style: styleSheets.walletP}, "免邮数"))
+	          )
 	      )
 	    )
 	  }
@@ -129,9 +141,21 @@
 
 	var MemberCenter = React.createClass({displayName: "MemberCenter",
 	  render : function(){
+
 	    return (
-	      React.createElement("div", null, 
-	          React.createElement("img", {src: "/images/m-1.jpg"})
+	      React.createElement("div", {style: styleSheets.div}, 
+	          React.createElement("img", {src: "../img/m-1.jpg", style: styleSheets.mcHeadImg}), 
+	          React.createElement("p", {style: styleSheets.mclog}, "登录/注册"), 
+	          React.createElement("div", {style: styleSheets.mcdj}, 
+	              React.createElement("dl", {style: styleSheets.mcdjDL}, 
+	                  React.createElement("dt", {style: styleSheets.mcdj1}, "0"), 
+	                  React.createElement("dd", null, "成长值")
+	              ), 
+	              React.createElement("dl", {style: styleSheets.mcdjDL2}, 
+	                  React.createElement("dt", {style: styleSheets.mcdj1}, "普通会员"), 
+	                  React.createElement("dd", null, "会员等级")
+	              )
+	          )
 	      )
 	    )
 	  }
