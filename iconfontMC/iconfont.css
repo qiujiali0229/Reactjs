@@ -1,10 +1,10 @@
 
 @font-face {font-family: "iconfont";
-  src: url('iconfont.eot?t=1484226549314'); /* IE9*/
-  src: url('iconfont.eot?t=1484226549314#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1484226549314') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1484226549314') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1484226549314#iconfont') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1484278419388'); /* IE9*/
+  src: url('iconfont.eot?t=1484278419388#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1484278419388') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1484278419388') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1484278419388#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 .iconfont {
@@ -20,6 +20,8 @@
 .icon-dizhi:before { content: "\e617"; }
 
 .icon-wallet:before { content: "\e607"; }
+
+.icon-yijianfankui:before { content: "\e62f"; }
 
 .icon-tuikuan:before { content: "\e671"; }
 
