@@ -2,13 +2,22 @@ var PhoneLogin = React.createClass({
   render : function(){
     return (
       <div style={styleSheets.logTop}>
-          <header style={styleSheets.logHead}><span style={styleSheets.logHeadSpan}>手机快捷登录</span><span style={styleSheets.logHeadSpan}>账号密码登录</span></header>
+          <header style={styleSheets.logHead}><span style={styleSheets.logHeadSpan} className="pho">手机快捷登录</span><span style={styleSheets.logHeadSpan} className="pho">账号密码登录</span></header>
           <p style={styleSheets.logP}><span className="iconfont" style={styleSheets.logIcon}>&#xe60e;</span><input type="text" placeholder="请输入手机号" style={styleSheets.logInput}/></p>
           <p style={styleSheets.logP}><span className="iconfont" style={styleSheets.logIcon}>&#xe828;</span><input type="text" placeholder="请输入验证码" style={styleSheets.logInput}/><span style={styleSheets.logSpan}>获取验证码</span></p>
           <p style={styleSheets.logQD}>确定</p>
           <p style={styleSheets.ml}><span style={styleSheets.whSpan}>√</span>同意<span style={styleSheets.serSpan}>《永辉生活服务协议》</span></p>
       </div>
     )
+  },
+  componentDidMount : function(){
+    $(".pho").click(function(){
+      $(this).css({
+        "backgroundColor" : "#fff"
+      }).siblings(".pho").css({
+        "backgroundColor" : ""
+      })
+    })
   }
 })
 module.exports = PhoneLogin;
@@ -16,15 +25,15 @@ var styleSheets={
    logTop : {
        "width" : "97%",
        "height" : "100%",
-       "margin" : "6rem auto 0",
+       "margin" : "7rem auto 0",
        "backgroundColor" : "#fff"
    },
    logHead : {
        "width" : "100%",
-       "height" : "2.8rem",
+       "height" : "3.2rem",
        "color" : "#2b2f2d",
        "backgroundColor" : "#fae1cd",
-       "lineHeight" : "2.8rem",
+       "lineHeight" : "3.6rem",
        "marginBottom" : "1.5rem"
    },
    logHeadSpan : {
@@ -41,7 +50,8 @@ var styleSheets={
       "color" :　"#b6b7b5"
    },
    logInput : {
-      "border" : "0"
+      "border" : "0",
+      "outline": "medium"
    },
    logIcon : {
      "width" : "1.3rem",

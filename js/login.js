@@ -1,18 +1,27 @@
-// var PhoneLogin = require('./phoneLogin');
-var PwdLogin = require('./PwdLogin')
+var PhoneLogin = require('./phoneLogin');
+var UserLogin = require('./userLogin');
 var Login = React.createClass({
   render : function(){
     return (
       <div style={styleSheets.bg}>
           <img src="../img/r-1.jpg" style={styleSheets.pos}/>
-          <p style={styleSheets.logP}><span style={styleSheets.logPosSpan}>X</span><span className="iconfont" style={styleSheets.user}>企业用户&ensp;&#xe670;</span></p>
-          <PwdLogin />
+          <p style={styleSheets.logP} className="box"><span style={styleSheets.logPosSpan} className="close">X</span><span className="iconfont user" style={styleSheets.user}>企业用户&ensp;&#xe670;</span></p>
+          <PhoneLogin />
           <div style={styleSheets.div}>
-              <p style={styleSheets.other}>-----------------其他登录方式----------------</p>
+              <p style={styleSheets.other}>---------------其他登录方式-------------</p>
               <p style={styleSheets.wx}><i className="iconfont" style={styleSheets.icLogo}>&#xe63b;</i></p>
           </div>
       </div>
     )
+  },
+  componentDidMount : function(){
+      console.log($(".box"))
+      $(".box").on("click",".user",function(){
+          console.log($(this))
+      })
+      $(".close").on("click",function(){
+          alert(2)
+      })
   }
 })
 module.exports = Login;
@@ -27,7 +36,9 @@ var styleSheets={
   },
   logP : {
        "width" : "100%",
-       "height" : "1.3rem"
+       "height" : "2.3rem",
+       "position" : "absolute",
+       "opacity" : "0"
   },
   logPosSpan : {
        "display" : "inline-block",
@@ -41,14 +52,12 @@ var styleSheets={
        "lingHeight" : "1.5rem",
        "position" : "absolute",
        "top" : "1rem",
-       "left" : "1rem"
+       "left" : ".6rem"
    },
    user : {
-      "color" : "#fff",
-      "fontSize" : "1rem",
       "position" : "absolute",
-      "right" : "1rem",
-      "top" : "1rem"
+      "right" : ".1rem",
+      "top" : "1.2rem"
    },
    bg : {
       "width" : "100%",
@@ -77,7 +86,6 @@ var styleSheets={
      "textAlign" : "center",
      "lineHeight" : "5rem",
      "backgorund" : "#fff",
-
    },
    icLogo : {
       "display" : "inline-block",

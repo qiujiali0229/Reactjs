@@ -4,9 +4,9 @@ var UserLogin = React.createClass({
       <div style={styleSheets.user}>
         <header style={styleSheets.head}><span className="iconfont" style={styleSheets.span}>&#xe604;</span><span>企业用户登录</span></header>
         <p style={styleSheets.logP}><span className="iconfont" style={styleSheets.logIcon}>&#xe60e;</span><input type="text" placeholder="请输入手机号" style={styleSheets.logInput}/></p>
-        <p style={styleSheets.logP}><span className="iconfont" style={styleSheets.logIcon}>&#xe828;</span><input type="text" placeholder="请输入密码" style={styleSheets.logInput}/><img  src="../img/r-2.jpg" style={styleSheets.logSpan}/></p>
+        <p style={styleSheets.logP}><span className="iconfont" style={styleSheets.logIcon}>&#xe828;</span><input type="text" placeholder="请输入密码" style={styleSheets.logInput}/><img  src="../img/r-2.jpg" style={styleSheets.logImg}/></p>
         <p style={styleSheets.logQD}>登录</p>
-        <p style={styleSheets.ml}><span style={styleSheets.whSpan}>忘记密码</span></p>
+        <p style={styleSheets.ml}>忘记密码</p>
       </div>
     )
   }
@@ -48,14 +48,13 @@ var styleSheets = {
     "height" : "1.2rem",
     "marginRight" : ".3rem"
   },
-  logSpan : {
-     "display" : "inline-block",
-     "width" : "1.4rem",
-     "height" : "1.4rem",
-     "fontSize" : "1.4rem",
-     "position" : "absolute",
-     "right" : "2rem",
-     "marginTop" : "4%"
+  logImg : {
+    "display" : "inline-block",
+    "width" : "1.4rem",
+    "height" : "1.4rem",
+    "marginTop" : ".8rem",
+    "position" : "absolute",
+    "right" : "2rem"
   },
   logQD : {
       "width" : "90%",
@@ -69,15 +68,11 @@ var styleSheets = {
       "fontSize" : "1rem"
   },
   ml : {
-     "marginLeft" : "1.2rem",
-     "color" : "#666",
-     "fontSize" : ".8rem"
-  },
-  whSpan : {
-      "display" : "inline-block",
-      "height" : "1.3rem",
-      "textAlign" : "center",
-      "lineHeight" : "1.3rem",
-      "marginRight" : ".4rem"
-   }
+    "width" : "90%",
+    "color" : "#666",
+    "backgroundColor" : "#fff",
+    "margin" : "auto",
+    "borderRadius" : "5px",
+    "fontSize" : ".8rem"
+  }
 }

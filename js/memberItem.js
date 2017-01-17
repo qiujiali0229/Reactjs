@@ -15,6 +15,12 @@ var MemberItem = React.createClass({
 })
 module.exports = MemberItem;
 var styleSheets={
+  mcItem : {
+      "width" : "100%",
+      "height" : "100%",
+      "flex" : "1",
+      "backgroundColor" : "#fff"
+  },
   itemInfo : {
        "width" : "97%",
        "height" : "3rem",

@@ -11,5 +11,10 @@ module.exports = {
               loader:"jsx-loader"
           }
       ]
+  },
+  devServer: {
+    contentBase: __dirname + '/build',
+    port: 80,
+    host: 'localhost'
   }
 }

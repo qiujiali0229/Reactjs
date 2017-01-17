@@ -1,9 +1,11 @@
+var Login = require('./Login');
+// var PhoneLogin = require('./phoneLogin');
 var MemberCenter = React.createClass({
   render : function(){
     return (
       <div style={styleSheets.mcHead}>
           <img src="../img/m-1.jpg" style={styleSheets.mcHeadImg}/>
-          <p style={styleSheets.mclog}>登录/注册</p>
+          <p style={styleSheets.mclog} className="login">登录/注册</p>
           <span style={styleSheets.mcHeadSet} className="iconfont">&#x343e;</span>
           <div style={styleSheets.mcdj}>
               <dl style={styleSheets.mcdjDL}>
@@ -17,6 +19,14 @@ var MemberCenter = React.createClass({
           </div>
       </div>
     )
+  },
+  componentDidMount : function(){
+    var that = this;
+    $(".login").on("click",function(){
+      that.props.login("login");
+      ReactDOM.unmountComponentAtNode(document.getElementById("app") )
+      ReactDOM.render(<Login />,document.getElementById("app"))
+    })
   }
 })
 module.exports = MemberCenter;

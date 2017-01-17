@@ -1,0 +1,18 @@
+/*-------------------------会员中心------------------------------*/
+@font-face {
+  font-family: 'iconfont';
+  src: url('../fonts/iconfontMC.eot');
+  src: url('../fonts/iconfontMC.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/iconfontMC.woff') format('woff'),
+  url('../fonts/iconfontMC.ttf') format('truetype'),
+  url('../fonts/iconfontMC.svg#iconfont') format('svg');
+}
+/*--------------------------------登录注册-----------------------------------*/
+@font-face {
+  font-family: 'iconfont';
+  src: url('../fonts/iconfontLogin.eot');
+  src: url('../fonts/iconfontLogin.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/iconfontLogin.woff') format('woff'),
+  url('../fonts/iconfontLogin.ttf') format('truetype'),
+  url('../fonts/iconfontLogin.svg#iconfont') format('svg');
+}

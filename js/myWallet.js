@@ -67,5 +67,12 @@ var styleSheets={
        "textAlign" : "center",
        "lineHeight" : "3rem",
        "fontSize" : "1.6rem"
+   },
+   orderSpan2 : {
+     "color" : "#a3a3a3",
+     "margin" : "0 0.7rem",
+     "fontSize" : "0.8rem",
+     "position" : "absolute",
+     "right" : "0.3rem"
    }
 }

@@ -4,7 +4,7 @@ var PwdLogin = React.createClass({
       <div style={styleSheets.logTop}>
           <header style={styleSheets.logHead}><span style={styleSheets.logHeadSpan}>手机快捷登录</span><span style={styleSheets.logHeadSpan}>账号密码登录</span></header>
           <p style={styleSheets.logP}><span className="iconfont" style={styleSheets.logIcon}>&#xe60e;</span><input type="text" placeholder="请输入手机号" style={styleSheets.logInput}/></p>
-          <p style={styleSheets.logP}><span className="iconfont" style={styleSheets.logIcon}>&#xe828;</span><input type="text" placeholder="请输入密码" style={styleSheets.logInput}/><img  src="../img/r-2.jpg" style={styleSheets.logSpan}/></p>
+          <p style={styleSheets.logP} class=""><span className="iconfont" style={styleSheets.logIcon}>&#xe828;</span><input type="text" placeholder="请输入密码" style={styleSheets.logInput}/><img  src="../img/r-2.jpg" style={styleSheets.logSpan}/></p>
           <p style={styleSheets.logQD}>登录</p>
           <p style={styleSheets.ml}><span style={styleSheets.whSpan}>忘记密码</span><span style={styleSheets.serSpan}>还没有账号?</span></p>
       </div>
@@ -16,15 +16,15 @@ var styleSheets={
    logTop : {
        "width" : "97%",
        "height" : "100%",
-       "margin" : "6rem auto 0",
+       "margin" : "7.3rem auto 0",
        "backgroundColor" : "#fff"
    },
    logHead : {
        "width" : "100%",
-       "height" : "2.8rem",
+       "height" : "3.2rem",
        "color" : "#2b2f2d",
        "backgroundColor" : "#fae1cd",
-       "lineHeight" : "2.8rem",
+       "lineHeight" : "3.6rem",
        "marginBottom" : "1.5rem"
    },
    logHeadSpan : {
@@ -41,7 +41,8 @@ var styleSheets={
       "color" :　"#b6b7b5"
    },
    logInput : {
-      "border" : "0"
+      "border" : "0",
+      "outline": "medium"
    },
    logIcon : {
      "width" : "1.3rem",
