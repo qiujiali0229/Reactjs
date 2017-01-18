@@ -12,9 +12,17 @@ module.exports = {
           }
       ]
   },
-  devServer: {
-    contentBase: __dirname + '/build',
-    port: 80,
-    host: 'localhost'
-  }
+    devServer:{
+		contentBase: __dirname,
+		port: 80,
+		host: 'localhost',
+		proxy: {
+			'/api': {
+				target: 'http://localhost:9000',
+				pathRewrite: {
+					'^/api': ''
+				}
+			}
+		}
+	}
 }
