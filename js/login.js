@@ -13,19 +13,10 @@ var Login = React.createClass({
           </div>
       </div>
     )
-  },
-  componentDidMount : function(){
-      console.log($(".box"))
-      $(".box").on("click",".user",function(){
-          console.log($(this))
-      })
-      $(".close").on("click",function(){
-          alert(2)
-      })
   }
 })
 module.exports = Login;
-var styleSheets={
+var styleSheets = {
   pos : {
       "width" : "100%",
       "height" : "7.3rem",

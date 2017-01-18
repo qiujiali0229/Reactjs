@@ -61,6 +61,7 @@
 	//     login : login
 	//   })
 	// }}/>,document.getElementById("memberCenter"));
+	// ReactDOM.render(<Login />,document.getElementById("app"));
 	ReactDOM.render(React.createElement(Layout, null),document.getElementById("app"));
 	// ReactDOM.render(<Login />,document.getElementById("app"));
 	// ReactDOM.render(<UserLogin />,document.getElementById("memberCenter"))
@@ -74,19 +75,6 @@
 	var MyOrder = __webpack_require__(3);
 	var MyWallet = __webpack_require__(4);
 	var MemberCenter = __webpack_require__(5);
-	// var Login = require('./login');
-	// var UserLogin = require('./userLogin');
-	// ReactDOM.render(<Layout />,document.getElementById("app"));
-	// ReactDOM.render(<MemberItem />,document.getElementById("memberItem"));
-	// ReactDOM.render(<MyOrder />,document.getElementById("myOrder"));
-	// ReactDOM.render(<MyWallet />,document.getElementById("myWallet"));
-	// ReactDOM.render(<MemberCenter login={function(login){
-	//   this.setState({
-	//     login : login
-	//   })
-	// }}/>,document.getElementById("memberCenter"));
-	// ReactDOM.render(<Login />,document.getElementById("memberCenter"));
-	// ReactDOM.render(<UserLogin />,document.getElementById("memberCenter"))
 	var Layout = React.createClass({displayName: "Layout",
 	  getInitialState : function(){
 	    return {
@@ -106,7 +94,6 @@
 	          React.createElement(MyOrder, null), 
 	          React.createElement(MyWallet, null), 
 	          React.createElement(MemberItem, null)
-
 	      )
 	    )
 	  }
@@ -403,7 +390,7 @@
 /* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Login = __webpack_require__(9);
+	var Login = __webpack_require__(6);
 	// var PhoneLogin = require('./phoneLogin');
 	var MemberCenter = React.createClass({displayName: "MemberCenter",
 	  render : function(){
@@ -494,96 +481,10 @@
 
 
 /***/ },
-/* 6 */,
-/* 7 */,
-/* 8 */
-/***/ function(module, exports) {
-
-	var UserLogin = React.createClass({displayName: "UserLogin",
-	  render : function(){
-	    return (
-	      React.createElement("div", {style: styleSheets.user}, 
-	        React.createElement("header", {style: styleSheets.head}, React.createElement("span", {className: "iconfont", style: styleSheets.span}, ""), React.createElement("span", null, "企业用户登录")), 
-	        React.createElement("p", {style: styleSheets.logP}, React.createElement("span", {className: "iconfont", style: styleSheets.logIcon}, ""), React.createElement("input", {type: "text", placeholder: "请输入手机号", style: styleSheets.logInput})), 
-	        React.createElement("p", {style: styleSheets.logP}, React.createElement("span", {className: "iconfont", style: styleSheets.logIcon}, ""), React.createElement("input", {type: "text", placeholder: "请输入密码", style: styleSheets.logInput}), React.createElement("img", {src: "../img/r-2.jpg", style: styleSheets.logImg})), 
-	        React.createElement("p", {style: styleSheets.logQD}, "登录"), 
-	        React.createElement("p", {style: styleSheets.ml}, "忘记密码")
-	      )
-	    )
-	  }
-	})
-	module.exports = UserLogin;
-	var styleSheets = {
-		user : {
-	    "width" : "100%",
-	    "height" : "100%",
-	    "backgroundColor" : "#fff",
-	  },
-	  head :{
-	    "width" : "100%",
-	    "height" : "4rem",
-	    "marginBottom" : "2rem",
-	    "textAlign" : "center",
-	    "lineHeight" : "4rem",
-	    "color" : "#656565",
-	    "fontSize" : "1.2rem"
-	  },
-	  span : {
-	    "fontSize" : "1.6rem",
-	    "position" : "absolute",
-	    "left" : "1rem"
-	  },
-	  logP : {
-	     "width" : "88%",
-	     "height" : "3rem",
-	     "lineHeight" : "3rem",
-	     "borderBottom" : "1px solid #f5f5f5",
-	     "margin" : "0 auto",
-	     "color" :　"#b6b7b5"
-	  },
-	  logInput : {
-	     "border" : "0"
-	  },
-	  logIcon : {
-	    "width" : "1.3rem",
-	    "height" : "1.2rem",
-	    "marginRight" : ".3rem"
-	  },
-	  logImg : {
-	    "display" : "inline-block",
-	    "width" : "1.4rem",
-	    "height" : "1.4rem",
-	    "marginTop" : ".8rem",
-	    "position" : "absolute",
-	    "right" : "2rem"
-	  },
-	  logQD : {
-	      "width" : "90%",
-	      "height" : "3rem",
-	      "color" : "#fff",
-	      "backgroundColor" : "#fd7722",
-	      "textAlign" : "center",
-	      "lineHeight" : "3rem",
-	      "margin" : "1.5rem auto",
-	      "borderRadius" : "5px",
-	      "fontSize" : "1rem"
-	  },
-	  ml : {
-	    "width" : "90%",
-	    "color" : "#666",
-	    "backgroundColor" : "#fff",
-	    "margin" : "auto",
-	    "borderRadius" : "5px",
-	    "fontSize" : ".8rem"
-	  }
-	}
-
-
-/***/ },
-/* 9 */
+/* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var PhoneLogin = __webpack_require__(10);
+	var PhoneLogin = __webpack_require__(7);
 	var UserLogin = __webpack_require__(8);
 	var Login = React.createClass({displayName: "Login",
 	  render : function(){
@@ -598,19 +499,10 @@
 	          )
 	      )
 	    )
-	  },
-	  componentDidMount : function(){
-	      console.log($(".box"))
-	      $(".box").on("click",".user",function(){
-	          console.log($(this))
-	      })
-	      $(".close").on("click",function(){
-	          alert(2)
-	      })
 	  }
 	})
 	module.exports = Login;
-	var styleSheets={
+	var styleSheets = {
 	  pos : {
 	      "width" : "100%",
 	      "height" : "7.3rem",
@@ -687,28 +579,67 @@
 
 
 /***/ },
-/* 10 */
+/* 7 */
 /***/ function(module, exports) {
 
 	var PhoneLogin = React.createClass({displayName: "PhoneLogin",
 	  render : function(){
 	    return (
 	      React.createElement("div", {style: styleSheets.logTop}, 
-	          React.createElement("header", {style: styleSheets.logHead}, React.createElement("span", {style: styleSheets.logHeadSpan, className: "pho"}, "手机快捷登录"), React.createElement("span", {style: styleSheets.logHeadSpan, className: "pho"}, "账号密码登录")), 
-	          React.createElement("p", {style: styleSheets.logP}, React.createElement("span", {className: "iconfont", style: styleSheets.logIcon}, ""), React.createElement("input", {type: "text", placeholder: "请输入手机号", style: styleSheets.logInput})), 
-	          React.createElement("p", {style: styleSheets.logP}, React.createElement("span", {className: "iconfont", style: styleSheets.logIcon}, ""), React.createElement("input", {type: "text", placeholder: "请输入验证码", style: styleSheets.logInput}), React.createElement("span", {style: styleSheets.logSpan}, "获取验证码")), 
-	          React.createElement("p", {style: styleSheets.logQD}, "确定"), 
-	          React.createElement("p", {style: styleSheets.ml}, React.createElement("span", {style: styleSheets.whSpan}, "√"), "同意", React.createElement("span", {style: styleSheets.serSpan}, "《永辉生活服务协议》"))
+	      React.createElement("header", {style: styleSheets.logHead}, React.createElement("span", {style: styleSheets.logHeadSpan, className: "pho"}, "手机快捷登录"), React.createElement("span", {style: styleSheets.logHeadSpan, className: "pwd"}, "账号密码登录")), 
+	          React.createElement("div", {className: "box1"}, 
+	              React.createElement("p", {style: styleSheets.logP}, React.createElement("span", {className: "iconfont", style: styleSheets.logIcon}, ""), React.createElement("input", {type: "text", placeholder: "请输入手机号", style: styleSheets.logInput, className: "pn"})), 
+	              React.createElement("p", {style: styleSheets.logP}, React.createElement("span", {className: "iconfont", style: styleSheets.logIcon}, ""), React.createElement("input", {type: "text", placeholder: "请输入验证码", style: styleSheets.logInput}), React.createElement("span", {style: styleSheets.logSpan, className: "yzm"}, "获取验证码")), 
+	              React.createElement("p", {style: styleSheets.logQD}, "确定"), 
+	              React.createElement("p", {style: styleSheets.ml}, React.createElement("span", {style: styleSheets.whSpan}, "√"), "同意", React.createElement("span", {style: styleSheets.serSpan}, "《永辉生活服务协议》"))
+	          ), 
+	          React.createElement("div", {style: styleSheets.xs, className: "box2"}, 
+	              React.createElement("p", {style: styleSheets.logP2}, React.createElement("span", {className: "iconfont", style: styleSheets.logIcon2}, ""), React.createElement("input", {type: "text", placeholder: "请输入账号", style: styleSheets.logInput2})), 
+	              React.createElement("p", {style: styleSheets.logP2, class: ""}, React.createElement("span", {className: "iconfont", style: styleSheets.logIcon2}, ""), React.createElement("input", {type: "text", placeholder: "请输入密码", style: styleSheets.logInput2}), React.createElement("img", {src: "../img/r-2.jpg", style: styleSheets.logSpan2})), 
+	              React.createElement("p", {style: styleSheets.logQD2}, "登录"), 
+	              React.createElement("p", {style: styleSheets.ml2}, React.createElement("span", {style: styleSheets.whSpan2}, "忘记密码"), React.createElement("span", {style: styleSheets.serSpan2}, "还没有账号?"))
+	          )
 	      )
 	    )
 	  },
 	  componentDidMount : function(){
+
+	    $(".pho").css({
+	      "background" : "#fff",
+	      "color" : "#ffb76d"
+	    })
 	    $(".pho").click(function(){
 	      $(this).css({
-	        "backgroundColor" : "#fff"
-	      }).siblings(".pho").css({
-	        "backgroundColor" : ""
+	        "backgroundColor" : "#fff",
+	        "color" : "#ffb76d"
+	      }).siblings().css({
+	        "backgroundColor" : "",
+	        "color" : "#2b2f2d"
 	      })
+	      $(".box2").css({
+	        "display" : "none"
+	      })
+	      $(".box1").css({
+	        "display" : "block"
+	      })
+	    });
+	    $(".pwd").click(function(){
+	      $(this).css({
+	        "backgroundColor" : "#fff",
+	        "color" : "#ffb76d"
+	      }).siblings().css({
+	        "backgroundColor" : "",
+	        "color" : "#2b2f2d"
+	      })
+	      $(".box1").css({
+	        "display" : "none"
+	      })
+	      $(".box2").css({
+	        "display" : "block"
+	      })
+	    });
+	    $(".yzm").click(function(){
+	      var yam = /^/g;
 	    })
 	  }
 	})
@@ -789,7 +720,160 @@
 	    },
 	    serSpan : {
 	        "color" : "#f17525"
-	    }
+	    },
+	    xs : {
+	        "display" : "none"
+	    },
+	    logHead2 : {
+	        "width" : "100%",
+	        "height" : "3.2rem",
+	        "color" : "#2b2f2d",
+	        "backgroundColor" : "#fae1cd",
+	        "lineHeight" : "3.6rem",
+	        "marginBottom" : "1.5rem"
+	    },
+	    logHeadSpan2 : {
+	       "display" : "inline-block",
+	       "width" : "50%",
+	       "textAlign" : "center"
+	    },
+	    logP2 : {
+	       "width" : "88%",
+	       "height" : "3rem",
+	       "lineHeight" : "3rem",
+	       "borderBottom" : "1px solid #f5f5f5",
+	       "margin" : "0 auto",
+	       "color" :　"#b6b7b5"
+	    },
+	    logInput2 : {
+	       "border" : "0",
+	       "outline": "medium"
+	    },
+	    logIcon2 : {
+	      "width" : "1.3rem",
+	      "height" : "1.2rem",
+	      "marginRight" : ".3rem"
+	    },
+	    logSpan2 : {
+	       "display" : "inline-block",
+	       "width" : "1.4rem",
+	       "height" : "1.4rem",
+	       "fontSize" : "1.4rem",
+	       "position" : "absolute",
+	       "right" : "2rem",
+	       "marginTop" : "4%"
+	    },
+	    logQD2 : {
+	        "width" : "90%",
+	        "height" : "3rem",
+	        "color" : "#fff",
+	        "backgroundColor" : "#fd7722",
+	        "textAlign" : "center",
+	        "lineHeight" : "3rem",
+	        "margin" : "1.5rem auto",
+	        "borderRadius" : "5px",
+	        "fontSize" : "1rem"
+	    },
+	    ml2 : {
+	       "marginLeft" : "1.2rem",
+	       "color" : "#666",
+	       "fontSize" : ".8rem"
+	    },
+	    whSpan2 : {
+	        "display" : "inline-block",
+	        "height" : "1.3rem",
+	        "textAlign" : "center",
+	        "lineHeight" : "1.3rem",
+	        "marginRight" : ".4rem"
+	     },
+	     serSpan2 : {
+	         "position" : "absolute",
+	         "right" : "2rem"
+	     }
+	}
+
+
+/***/ },
+/* 8 */
+/***/ function(module, exports) {
+
+	var UserLogin = React.createClass({displayName: "UserLogin",
+	  render : function(){
+	    return (
+	      React.createElement("div", {style: styleSheets.user}, 
+	        React.createElement("header", {style: styleSheets.head}, React.createElement("span", {className: "iconfont", style: styleSheets.span}, ""), React.createElement("span", null, "企业用户登录")), 
+	        React.createElement("p", {style: styleSheets.logP}, React.createElement("span", {className: "iconfont", style: styleSheets.logIcon}, ""), React.createElement("input", {type: "text", placeholder: "请输入手机号", style: styleSheets.logInput})), 
+	        React.createElement("p", {style: styleSheets.logP}, React.createElement("span", {className: "iconfont", style: styleSheets.logIcon}, ""), React.createElement("input", {type: "text", placeholder: "请输入密码", style: styleSheets.logInput}), React.createElement("img", {src: "../img/r-2.jpg", style: styleSheets.logImg})), 
+	        React.createElement("p", {style: styleSheets.logQD}, "登录"), 
+	        React.createElement("p", {style: styleSheets.ml}, "忘记密码")
+	      )
+	    )
+	  }
+	})
+	module.exports = UserLogin;
+	var styleSheets = {
+		user : {
+	    "width" : "100%",
+	    "height" : "100%",
+	    "backgroundColor" : "#fff",
+	  },
+	  head :{
+	    "width" : "100%",
+	    "height" : "4rem",
+	    "marginBottom" : "2rem",
+	    "textAlign" : "center",
+	    "lineHeight" : "4rem",
+	    "color" : "#656565",
+	    "fontSize" : "1.2rem"
+	  },
+	  span : {
+	    "fontSize" : "1.6rem",
+	    "position" : "absolute",
+	    "left" : "1rem"
+	  },
+	  logP : {
+	     "width" : "88%",
+	     "height" : "3rem",
+	     "lineHeight" : "3rem",
+	     "borderBottom" : "1px solid #f5f5f5",
+	     "margin" : "0 auto",
+	     "color" :　"#b6b7b5"
+	  },
+	  logInput : {
+	     "border" : "0"
+	  },
+	  logIcon : {
+	    "width" : "1.3rem",
+	    "height" : "1.2rem",
+	    "marginRight" : ".3rem"
+	  },
+	  logImg : {
+	    "display" : "inline-block",
+	    "width" : "1.4rem",
+	    "height" : "1.4rem",
+	    "marginTop" : ".8rem",
+	    "position" : "absolute",
+	    "right" : "2rem"
+	  },
+	  logQD : {
+	      "width" : "90%",
+	      "height" : "3rem",
+	      "color" : "#fff",
+	      "backgroundColor" : "#fd7722",
+	      "textAlign" : "center",
+	      "lineHeight" : "3rem",
+	      "margin" : "1.5rem auto",
+	      "borderRadius" : "5px",
+	      "fontSize" : "1rem"
+	  },
+	  ml : {
+	    "width" : "90%",
+	    "color" : "#666",
+	    "backgroundColor" : "#fff",
+	    "margin" : "auto",
+	    "borderRadius" : "5px",
+	    "fontSize" : ".8rem"
+	  }
 	}
 
 

@@ -15,6 +15,7 @@ var Layout = require('./layout');
 //     login : login
 //   })
 // }}/>,document.getElementById("memberCenter"));
+// ReactDOM.render(<Login />,document.getElementById("app"));
 ReactDOM.render(<Layout />,document.getElementById("app"));
 // ReactDOM.render(<Login />,document.getElementById("app"));
 // ReactDOM.render(<UserLogin />,document.getElementById("memberCenter"))
